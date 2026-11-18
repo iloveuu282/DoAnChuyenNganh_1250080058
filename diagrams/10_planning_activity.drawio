@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" compressed="false" type="device">
+  <diagram id="10_planning_activity" name="HOẠT ĐỘNG LẬP VÀ ĐỐI CHIẾU KẾ HOẠCH">
+    <mxGraphModel fold="1" pageWidth="1190" dx="1400" tooltips="1" guides="1" connect="1" grid="1" shadow="0" math="0" pageHeight="1470" dy="1000" gridSize="10" background="#FFFFFF" pageScale="1" page="1" arrows="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=24;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;fontStyle=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="title" value="HOẠT ĐỘNG LẬP VÀ ĐỐI CHIẾU KẾ HOẠCH">
+          <mxGeometry y="15" width="1130" as="geometry" height="50" x="30" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#E8F5EC;rounded=1;arcSize=50;spacing=8;" id="start" value="Bắt đầu">
+          <mxGeometry y="100" width="170" as="geometry" height="48" x="310" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="create" value="Tạo danh sách và chọn tháng dự kiến">
+          <mxGeometry y="200" width="400" as="geometry" height="75" x="195" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="items" value="Thêm / sửa mặt hàng khi danh sách chưa mua">
+          <mxGeometry y="345" width="430" as="geometry" height="75" x="180" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="estimate" value="Làm tròn thành tiền từng mặt hàng&#xA;Cộng tổng dự kiến của danh sách">
+          <mxGeometry y="490" width="410" as="geometry" height="85" x="190" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="monthly" value="Cộng các danh sách chưa mua&#xA;của cùng tài khoản và tháng dự kiến">
+          <mxGeometry y="650" width="410" as="geometry" height="85" x="190" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFF8E7;shape=rhombus;spacing=8;" id="budget" value="Đã thiết lập ngân sách tháng?">
+          <mxGeometry y="815" width="280" as="geometry" height="110" x="255" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="remaining" value="Hạn mức − tổng chi thực tế trong tháng">
+          <mxGeometry y="1005" width="410" as="geometry" height="75" x="190" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="compare" value="Đối chiếu riêng danh sách và tổng kế hoạch&#xA;Hiển thị phù hợp hoặc vượt dự trù">
+          <mxGeometry y="1155" width="480" as="geometry" height="90" x="155" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="missing" value="Thông báo chưa thiết lập ngân sách">
+          <mxGeometry y="825" width="350" as="geometry" height="90" x="775" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#E8F5EC;rounded=1;arcSize=50;spacing=8;" id="end" value="Giữ nguyên số dư và chi thực tế">
+          <mxGeometry y="1340" width="480" as="geometry" height="65" x="155" />
+        </mxCell>
+        <mxCell source="start" id="e1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="create">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="create" id="e2" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="items">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="items" id="e3" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="estimate">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="estimate" id="e4" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="monthly">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="monthly" id="e5" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="budget">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="budget" id="e6" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="Có" target="remaining">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="budget" id="e7" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" value="Không" target="missing">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="remaining" id="e8" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="compare">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="compare" id="e9" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="end">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="missing" id="e10" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="end">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="1372" x="950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

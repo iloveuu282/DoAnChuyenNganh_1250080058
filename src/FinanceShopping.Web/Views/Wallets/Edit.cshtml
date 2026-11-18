@@ -1,0 +1,3 @@
+@model WalletForm
+@{ViewData["Title"]="Chỉnh sửa ví";}
+<h1>@(Model.Id==0?"Thêm":"Chỉnh sửa") ví</h1><section class="panel form"><form asp-action="Edit" method="post"><div asp-validation-summary="All"></div><input asp-for="Id" type="hidden"/><div class="field"><label asp-for="Name">Tên ví</label><input asp-for="Name" required maxlength="100"/></div><div class="field"><label asp-for="OpeningBalance">Số dư ban đầu (VND)</label><input asp-for="OpeningBalance" type="number" step="0.01" min="-999999999999" max="999999999999" required/></div><div class="actions"><button>Lưu ví</button><a class="button secondary" asp-action="Index">Quay lại</a></div></form></section>

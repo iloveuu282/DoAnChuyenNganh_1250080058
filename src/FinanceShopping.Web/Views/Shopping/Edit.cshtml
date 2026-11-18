@@ -1,0 +1,3 @@
+@model ListForm
+@{ViewData["Title"]="Danh sách mua sắm";}
+<h1>@(Model.Id==0?"Tạo":"Sửa") danh sách mua sắm</h1><section class="panel form"><form asp-action="Edit" method="post"><div asp-validation-summary="All"></div><input asp-for="Id" type="hidden"/><input asp-for="Version" type="hidden"/><div class="field"><label asp-for="Name">Tên danh sách</label><input asp-for="Name" required maxlength="150"/></div><div class="field"><label asp-for="PlannedMonth">Tháng dự kiến mua</label><input asp-for="PlannedMonth" type="month" value="@Model.PlannedMonth.ToString("yyyy-MM")" required min="1900-01" max="2100-12"/></div><div class="actions"><button>Lưu danh sách</button><a class="button secondary" asp-action="Index">Quay lại</a></div></form></section>

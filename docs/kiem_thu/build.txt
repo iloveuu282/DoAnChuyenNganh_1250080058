@@ -1,0 +1,10 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FinanceShopping.Web -> <PROJECT_ROOT>\src\FinanceShopping.Web\bin\Release\net10.0\FinanceShopping.Web.dll
+  FinanceShopping.Checks -> <PROJECT_ROOT>\tests\FinanceShopping.Checks\bin\Release\net10.0\FinanceShopping.Checks.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.77

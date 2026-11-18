@@ -1,0 +1,4 @@
+@model LoginForm
+@{ViewData["Title"]="Đăng nhập";}
+<section class="panel auth"><h1>Chào mừng đến với MVKing</h1><p class="muted">Theo dõi thu chi và chuẩn bị cho kế hoạch mua sắm.</p>
+<form method="post" asp-action="Login"><div asp-validation-summary="All"></div><div class="field"><label asp-for="Email">Email</label><input asp-for="Email" type="email" autocomplete="username" required/></div><div class="field"><label asp-for="Password">Mật khẩu</label><input asp-for="Password" autocomplete="current-password" required/></div><button>Đăng nhập</button></form><p>Chưa có tài khoản? <a asp-action="Register">Đăng ký</a></p></section>

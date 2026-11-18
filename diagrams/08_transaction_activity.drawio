@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" compressed="false" type="device">
+  <diagram id="08_transaction_activity" name="HOẠT ĐỘNG GHI THU CHI">
+    <mxGraphModel fold="1" pageWidth="1120" dx="1400" tooltips="1" guides="1" connect="1" grid="1" shadow="0" math="0" pageHeight="1190" dy="1000" gridSize="10" background="#FFFFFF" pageScale="1" page="1" arrows="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=24;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;fontStyle=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="title" value="HOẠT ĐỘNG GHI THU CHI">
+          <mxGeometry y="15" width="1060" as="geometry" height="50" x="30" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#E8F5EC;rounded=1;arcSize=50;spacing=8;" id="start" value="Bắt đầu">
+          <mxGeometry y="100" width="170" as="geometry" height="48" x="290" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="input" value="Nhập thông tin giao dịch">
+          <mxGeometry y="200" width="350" as="geometry" height="65" x="200" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFF8E7;shape=rhombus;spacing=8;" id="valid" value="ModelState hợp lệ?">
+          <mxGeometry y="340" width="230" as="geometry" height="100" x="260" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="refs" value="Kiểm tra UserId, ví, danh mục&#xA;đúng loại Thu / Chi và số tiền">
+          <mxGeometry y="510" width="390" as="geometry" height="85" x="180" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFF8E7;shape=rhombus;spacing=8;" id="linked" value="Khoản chi mua sắm liên kết?">
+          <mxGeometry y="660" width="260" as="geometry" height="110" x="245" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="save" value="Lưu giao dịch thông thường">
+          <mxGeometry y="845" width="350" as="geometry" height="70" x="200" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="recalc" value="Tính lại số dư và ngân sách&#xA;Hiển thị kết quả và cảnh báo nếu vượt">
+          <mxGeometry y="995" width="390" as="geometry" height="85" x="180" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FDECEC;rounded=1;arcSize=10;spacing=10;" id="error" value="Hiển thị lỗi / từ chối thao tác&#xA;Khoản chi liên kết cần hủy mua trước">
+          <mxGeometry y="520" width="350" as="geometry" height="90" x="725" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="txnote" value="Số dư = số dư ban đầu + tổng thu − tổng chi. Chỉ cảnh báo khi âm hoặc vượt hạn mức.">
+          <mxGeometry y="1120" width="1010" as="geometry" height="40" x="55" />
+        </mxCell>
+        <mxCell source="start" id="e1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="input">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="input" id="e2" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="valid">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="valid" id="e3" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="Có" target="refs">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="valid" id="e4" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="Không" target="error">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="390" x="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="refs" id="e5" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="linked">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="linked" id="e6" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="Không" target="save">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="linked" id="e7" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" value="Có" target="error">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="715" x="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="save" id="e8" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="recalc">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>@ViewData["Title"] — Sổ chi tiêu</title><link rel="stylesheet" href="~/css/theme.css" asp-append-version="true"/><link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/></head>
+<body><header><a class="brand" asp-controller="Home" asp-action="Index"><span class="brand-icon">₫</span> Sổ chi tiêu</a>
+@if(User.Identity?.IsAuthenticated==true){<nav aria-label="Điều hướng chính"><a asp-controller="Home" asp-action="Index">Tổng quan</a><a asp-controller="Transactions" asp-action="Index">Thu chi</a><a asp-controller="Wallets" asp-action="Index">Ví</a><a asp-controller="Categories" asp-action="Index">Danh mục</a><a asp-controller="Budgets" asp-action="Index">Ngân sách</a><a asp-controller="Shopping" asp-action="Index">Mua sắm</a></nav>
+<details class="account"><summary>@User.Identity.Name</summary><form asp-controller="Account" asp-action="Logout" method="post"><button class="secondary">Đăng xuất</button></form></details>}
+</header><main>
+@foreach(var kind in new[]{"Error","Warning","Success"}){if(TempData[kind] is string message){<div role="alert" class="notice @kind.ToLowerInvariant()">@message</div>}}
+@RenderBody()</main><footer>Quản lý tài chính cá nhân và hỗ trợ mua sắm · Dữ liệu VND</footer>
+<script src="~/js/site.js" asp-append-version="true" defer></script></body></html>

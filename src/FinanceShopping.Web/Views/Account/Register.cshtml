@@ -1,0 +1,4 @@
+@model RegisterForm
+@{ViewData["Title"]="Đăng ký";}
+<section class="panel auth"><h1>Tạo tài khoản</h1><p class="muted">Mỗi tài khoản quản lý dữ liệu riêng.</p><form asp-action="Register" method="post"><div asp-validation-summary="All"></div>
+<div class="field"><label asp-for="Email">Email</label><input asp-for="Email" type="email" required autocomplete="username"/></div><div class="field"><label asp-for="Password">Mật khẩu</label><input asp-for="Password" required minlength="8" autocomplete="new-password"/><span class="note">Ít nhất 8 ký tự, có chữ hoa, chữ thường, số và ký tự đặc biệt.</span></div><div class="field"><label asp-for="ConfirmPassword">Nhập lại mật khẩu</label><input asp-for="ConfirmPassword" required autocomplete="new-password"/></div><button>Đăng ký</button></form><p><a asp-action="Login">Quay lại đăng nhập</a></p></section>

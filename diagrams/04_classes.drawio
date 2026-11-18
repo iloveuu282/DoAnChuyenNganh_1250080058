@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" compressed="false" type="device">
+  <diagram id="04_classes" name="SƠ ĐỒ LỚP NGHIỆP VỤ">
+    <mxGraphModel fold="1" pageWidth="1670" dx="1400" tooltips="1" guides="1" connect="1" grid="1" shadow="0" math="0" pageHeight="1430" dy="1000" gridSize="10" background="#FFFFFF" pageScale="1" page="1" arrows="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=24;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;fontStyle=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="title" value="SƠ ĐỒ LỚP NGHIỆP VỤ">
+          <mxGeometry y="15" width="1610" as="geometry" height="50" x="30" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="identity" value="IdentityUser">
+          <mxGeometry y="100" width="420" as="geometry" height="90" x="65" />
+        </mxCell>
+        <mxCell id="identity_body" parent="identity" vertex="1" value="Lớp tài khoản của ASP.NET Core Identity" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="420" as="geometry" height="52" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="appuser" value="ApplicationUser">
+          <mxGeometry y="285" width="420" as="geometry" height="90" x="65" />
+        </mxCell>
+        <mxCell id="appuser_body" parent="appuser" vertex="1" value="Kế thừa thông tin tài khoản Identity" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="420" as="geometry" height="52" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="owned" value="«abstract» OwnedEntity">
+          <mxGeometry y="250" width="390" as="geometry" height="120" x="650" />
+        </mxCell>
+        <mxCell id="owned_body" parent="owned" vertex="1" value="+ Id : int&#xA;+ UserId : string" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="390" as="geometry" height="82" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="wallet" value="Wallet">
+          <mxGeometry y="600" width="400" as="geometry" height="125" x="55" />
+        </mxCell>
+        <mxCell id="wallet_body" parent="wallet" vertex="1" value="+ Name : string&#xA;+ OpeningBalance : decimal" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="400" as="geometry" height="87" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="category" value="Category">
+          <mxGeometry y="600" width="400" as="geometry" height="125" x="635" />
+        </mxCell>
+        <mxCell id="category_body" parent="category" vertex="1" value="+ Name : string&#xA;+ Type : FlowType" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="400" as="geometry" height="87" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="budget" value="Budget">
+          <mxGeometry y="600" width="400" as="geometry" height="125" x="1215" />
+        </mxCell>
+        <mxCell id="budget_body" parent="budget" vertex="1" value="+ Month : DateTime&#xA;+ Limit : decimal" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="400" as="geometry" height="87" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="transaction" value="Transaction">
+          <mxGeometry y="970" width="430" as="geometry" height="180" x="55" />
+        </mxCell>
+        <mxCell id="transaction_body" parent="transaction" vertex="1" value="+ WalletId, CategoryId : int&#xA;+ ShoppingListId : int?&#xA;+ Type : FlowType · Amount : decimal&#xA;+ Date : DateTime · Note : string" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="430" as="geometry" height="142" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="list" value="ShoppingList">
+          <mxGeometry y="940" width="410" as="geometry" height="245" x="635" />
+        </mxCell>
+        <mxCell id="list_body" parent="list" vertex="1" value="+ Name : string&#xA;+ PlannedMonth : DateTime&#xA;+ IsPurchased : bool&#xA;+ Version : Guid&#xA;+ Items : List&lt;ShoppingItem&gt;&#xA;+ Purchase : Transaction?" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="410" as="geometry" height="207" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="item" value="ShoppingItem">
+          <mxGeometry y="940" width="400" as="geometry" height="220" x="1215" />
+        </mxCell>
+        <mxCell id="item_body" parent="item" vertex="1" value="+ ShoppingListId : int&#xA;+ Name : string&#xA;+ Quantity : decimal&#xA;+ EstimatedPrice : decimal&#xA;+ Priority : Priority" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="400" as="geometry" height="182" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFFFFF;shape=swimlane;startSize=38;horizontal=1;rounded=0;collapsible=0;fontStyle=1;swimlaneFillColor=#FFFFFF;fillColor=#E2E8F0;" id="service" value="FinanceService">
+          <mxGeometry y="110" width="505" as="geometry" height="150" x="1110" />
+        </mxCell>
+        <mxCell id="service_body" parent="service" vertex="1" value="+ SaveTransaction() · Remaining()&#xA;+ ItemEstimate() · Estimate() · PlannedTotal()&#xA;+ Confirm() · Cancel() · Overview()" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontFamily=Segoe UI;fontColor=#172033;strokeColor=none;fillColor=none;" connectable="0">
+          <mxGeometry y="38" width="505" as="geometry" height="112" x="0" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="classnote" value="OwnedEntity là lớp cơ sở C#, không phải bảng riêng. Mũi tên tam giác rỗng chỉ về lớp cha; hình thoi đặc chỉ quan hệ hợp thành.">
+          <mxGeometry y="1325" width="1510" as="geometry" height="55" x="80" />
+        </mxCell>
+        <mxCell source="appuser" id="inherituser" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="identity">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="appuser" id="owns" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;endSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" value="1 : 0..*" target="owned">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="wallet" id="inheritw" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="owned">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="455" x="255" />
+              <mxPoint y="455" x="708" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="category" id="inheritc" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="owned">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="budget" id="inheritb" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.85;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="owned">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="455" x="1415" />
+              <mxPoint y="455" x="982" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="transaction" id="inheritt" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="owned">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="1006" x="550" />
+              <mxPoint y="346" x="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="list" id="inheritl" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=1;exitY=0.1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="owned">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="964" x="1080" />
+              <mxPoint y="310" x="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="item" id="inherititem" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;endSize=13;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=1;entryY=0.2;entryDx=0;entryDy=0;" parent="1" edge="1" value="" target="owned">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="984" x="1640" />
+              <mxPoint y="274" x="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="wallet" id="wallettrans" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;endSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="1 : 0..*" target="transaction">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="category" id="categorytrans" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;endSize=9;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="1 : 0..*" target="transaction">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="825" x="695" />
+              <mxPoint y="825" x="421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell source="list" id="listitems" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;startArrow=diamond;startFill=1;startSize=12;endArrow=none;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" edge="1" value="1 : 0..*" target="item">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="list" id="purchase" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;endSize=9;exitX=0;exitY=0.65;exitDx=0;exitDy=0;entryX=1;entryY=0.65;entryDx=0;entryDy=0;" parent="1" edge="1" value="Purchase: 1 : 0..1" target="transaction">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell source="service" id="serviceowns" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=open;endFill=0;endSize=9;exitX=0;exitY=0.65;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" value="Sử dụng các entity" target="owned">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint y="207" x="982" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

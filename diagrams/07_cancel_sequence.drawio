@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" compressed="false" type="device">
+  <diagram id="07_cancel_sequence" name="TRÌNH TỰ HỦY GHI NHẬN MUA">
+    <mxGraphModel fold="1" pageWidth="1360" dx="1400" tooltips="1" guides="1" connect="1" grid="1" shadow="0" math="0" pageHeight="1380" dy="1000" gridSize="10" background="#FFFFFF" pageScale="1" page="1" arrows="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=24;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;fontStyle=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="title" value="TRÌNH TỰ HỦY GHI NHẬN MUA">
+          <mxGeometry y="15" width="1300" as="geometry" height="50" x="30" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#FFFFFF;" id="actor" value="Người dùng">
+          <mxGeometry y="82" width="80" as="geometry" height="105" x="40" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="controller" value="ShoppingController">
+          <mxGeometry y="95" width="250" as="geometry" height="65" x="300" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="service" value="FinanceService">
+          <mxGeometry y="95" width="220" as="geometry" height="65" x="700" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=16;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#F1F5F9;rounded=1;arcSize=10;spacing=10;" id="db" value="SQL Server&#xA;qua Entity Framework Core">
+          <mxGeometry y="95" width="245" as="geometry" height="65" x="1080" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m1_label" value="POST Cancel(id, Version) + CSRF">
+          <mxGeometry y="203" width="331" as="geometry" height="42" x="87" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m2_label" value="Cancel(UserId, id, Version)">
+          <mxGeometry y="288" width="371" as="geometry" height="42" x="432" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m3_label" value="BeginTransaction(Serializable)">
+          <mxGeometry y="373" width="378" as="geometry" height="42" x="817" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m4_label" value="Đọc danh sách và khoản chi liên kết">
+          <mxGeometry y="448" width="378" as="geometry" height="42" x="817" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;rounded=0;fillColor=none;align=left;verticalAlign=top;spacingTop=10;spacingLeft=12;fontStyle=1;" id="alt" value="alt">
+          <mxGeometry y="535" width="1040" as="geometry" height="590" x="285" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;fontStyle=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="cond1" value="[Chưa mua]">
+          <mxGeometry y="565" width="250" as="geometry" height="30" x="310" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m5_label" value="Không thay đổi dữ liệu">
+          <mxGeometry y="598" width="371" as="geometry" height="42" x="432" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;fontStyle=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="cond2" value="[Đã mua, Version hợp lệ]">
+          <mxGeometry y="705" width="340" as="geometry" height="30" x="310" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m6_label" value="DELETE Transaction + SaveChanges">
+          <mxGeometry y="758" width="378" as="geometry" height="42" x="817" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m7_label" value="IsPurchased=false; Version mới; SaveChanges">
+          <mxGeometry y="838" width="378" as="geometry" height="42" x="817" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m8_label" value="Commit">
+          <mxGeometry y="918" width="378" as="geometry" height="42" x="817" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m9_label" value="Thành công">
+          <mxGeometry y="1033" width="371" as="geometry" height="42" x="432" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=#FFF8E7;shape=note;size=14;spacing=10;" id="cancelnote" value="Lỗi khi ghi → rollback. Hủy để sửa ghi nhận nhầm;&#xA;chưa lưu nhật ký hủy và chưa phải hoàn tiền thực tế.">
+          <mxGeometry y="1160" width="625" as="geometry" height="65" x="695" />
+        </mxCell>
+        <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;fillColor=none;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" id="m10_label" value="Chuyển hướng; số dư và ngân sách tính lại">
+          <mxGeometry y="1243" width="331" as="geometry" height="42" x="87" />
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=none;" edge="1" id="lu" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="230" as="sourcePoint" x="80" />
+            <mxPoint y="1295" as="targetPoint" x="80" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=none;" edge="1" id="lc" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="180" as="sourcePoint" x="425" />
+            <mxPoint y="1295" as="targetPoint" x="425" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=none;" edge="1" id="ls" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="180" as="sourcePoint" x="810" />
+            <mxPoint y="1295" as="targetPoint" x="810" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=none;" edge="1" id="ld" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="180" as="sourcePoint" x="1202" />
+            <mxPoint y="1295" as="targetPoint" x="1202" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m1" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="250" as="sourcePoint" x="80" />
+            <mxPoint y="250" as="targetPoint" x="425" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m2" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="335" as="sourcePoint" x="425" />
+            <mxPoint y="335" as="targetPoint" x="810" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m3" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="420" as="sourcePoint" x="810" />
+            <mxPoint y="420" as="targetPoint" x="1202" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m4" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="495" as="sourcePoint" x="810" />
+            <mxPoint y="495" as="targetPoint" x="1202" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=open;endFill=0;endSize=9;" edge="1" id="m5" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="645" as="sourcePoint" x="810" />
+            <mxPoint y="645" as="targetPoint" x="425" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=none;" edge="1" id="divider" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="685" as="sourcePoint" x="285" />
+            <mxPoint y="685" as="targetPoint" x="1325" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m6" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="805" as="sourcePoint" x="810" />
+            <mxPoint y="805" as="targetPoint" x="1202" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m7" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="885" as="sourcePoint" x="810" />
+            <mxPoint y="885" as="targetPoint" x="1202" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=1;endSize=9;" edge="1" id="m8" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="965" as="sourcePoint" x="810" />
+            <mxPoint y="965" as="targetPoint" x="1202" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=open;endFill=0;endSize=9;" edge="1" id="m9" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="1080" as="sourcePoint" x="810" />
+            <mxPoint y="1080" as="targetPoint" x="425" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell parent="1" style="edgeStyle=none;rounded=0;html=0;fontFamily=Segoe UI;fontSize=14;fontColor=#172033;strokeColor=#475569;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 5;endArrow=open;endFill=0;endSize=9;" edge="1" id="m10" value="">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint y="1290" as="sourcePoint" x="425" />
+            <mxPoint y="1290" as="targetPoint" x="80" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

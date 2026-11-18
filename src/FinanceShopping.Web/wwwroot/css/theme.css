@@ -1,0 +1,28 @@
+/* ĐỔI GIAO DIỆN TẠI ĐÂY. Không cần sửa C# hoặc database.
+   --font-base: cỡ chữ chung. Các cỡ rem trong site.css tăng/giảm theo nó.
+   --color-primary: màu nút và liên kết. */
+:root {
+    --font-family: "Segoe UI", Arial, sans-serif;
+    --font-base: 16px;
+    --line-height: 1.6;
+    --font-small: 0.8125rem;
+    --font-title: 1.75rem;
+    --font-heading: 1.25rem;
+    --font-value: 1.75rem;
+    --color-primary: #1768c4;
+    --color-primary-hover: #1054a3;
+    --color-background: #f4f7fb;
+    --color-surface: #ffffff;
+    --color-text: #19334e;
+    --color-muted: #627790;
+    --color-border: #dce5ef;
+    --color-income: #167347;
+    --color-expense: #b83b3b;
+    --panel-radius: 14px;
+    --panel-padding: 24px;
+    --page-width: 1180px;
+    --color-accent-soft: #eaf3ff;
+    --color-decoration: #d5e6fa;
+    --color-header-tint: #f5f9ff;
+    --color-shadow: #19334e0a;
+}

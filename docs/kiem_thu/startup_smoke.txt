@@ -1,0 +1,7 @@
+﻿PASS actual Kestrel + configured SQL Server: /?month=2026-11-01 => 200
+PASS actual Kestrel + configured SQL Server: /Wallets => 200
+PASS actual Kestrel + configured SQL Server: /Categories => 200
+PASS actual Kestrel + configured SQL Server: /Transactions => 200
+PASS actual Kestrel + configured SQL Server: /Budgets?month=2026-11-01 => 200
+PASS actual Kestrel + configured SQL Server: /Shopping => 200
+PASS LAN Host header accepted: 200; not a physical phone test

@@ -1,0 +1,20 @@
+**/bin/
+**/obj/
+.vs/
+**/appsettings.Local.json
+**/*.user
+publish/
+
+# Local runtime output, editor files and machine-specific configuration
+/output/
+**/.vs/
+**/TestResults/
+*.log
+*.tmp
+~$*
+.env
+.env.*
+*.bak
+*.mdf
+*.ldf
+/AGENTS.md
