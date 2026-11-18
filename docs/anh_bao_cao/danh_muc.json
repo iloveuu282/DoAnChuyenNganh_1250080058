@@ -1,0 +1,188 @@
+[
+    {
+        "figure":  "3.1",
+        "file":  "hinh_3_01_01_dang_nhap.jpg",
+        "caption":  "Hình 3.1. Biểu mẫu đăng nhập tài khoản",
+        "sha256":  "68d94282d772a9dc5637fd8316e3465d3a8b1717277da21cea855b8ae0593324"
+    },
+    {
+        "figure":  "3.2",
+        "file":  "hinh_3_02_02_dang_ky.jpg",
+        "caption":  "Hình 3.2. Biểu mẫu đăng ký tài khoản",
+        "sha256":  "7484369d14e9291cc43ad729bb93f7f68c2bd33cf04a07ce856f2726e62c7dfe"
+    },
+    {
+        "figure":  "3.3",
+        "file":  "hinh_3_03_04_danh_sach_vi_tien_mat_1550k.jpg",
+        "caption":  "Hình 3.3. Danh sách ví ở bộ số liệu A",
+        "sha256":  "7c5a21c8b819a8891935d57fe5660a5537e7bc9647a4f2c381aca1d88c42ff70"
+    },
+    {
+        "figure":  "3.4",
+        "file":  "hinh_3_04_33a_hop_thoai_xac_nhan_xoa_vi_chua_co_ket_qua.png",
+        "caption":  "Hình 3.4. Hộp thoại hỏi xóa ví trước khi gửi yêu cầu",
+        "sha256":  "e8c7c41afef50ad0eae1ef541c2f54a7de6f7c80868e57ba70453fe3acfdcd64"
+    },
+    {
+        "figure":  "3.5",
+        "file":  "hinh_3_05_33_tu_choi_xoa_vi_co_giao_dich.jpg",
+        "caption":  "Hình 3.5. Máy chủ từ chối xóa ví đã có giao dịch",
+        "sha256":  "813dee12595b59fb47c273afa30cfe947d90b67543e0d72c05a6feb9135a3df8"
+    },
+    {
+        "figure":  "3.6",
+        "file":  "hinh_3_06_07_danh_muc_thu_chi.jpg",
+        "caption":  "Hình 3.6. Danh sách danh mục thu nhập và chi tiêu",
+        "sha256":  "5bc7dfab60242b8f11f22ef447293dd4467de10c274a0869b04463863dab7bbf"
+    },
+    {
+        "figure":  "3.7",
+        "file":  "hinh_3_07_10_nhap_khoan_chi_an_sang.jpg",
+        "caption":  "Hình 3.7. Biểu mẫu nhập khoản chi ăn sáng trước khi lưu",
+        "sha256":  "79acf191c19d0195eac1c5f00466aa8296b41ed0f395e09439dbf4fcf660af64"
+    },
+    {
+        "figure":  "3.8",
+        "file":  "hinh_3_08_12_danh_sach_2_giao_dich_bo_loc_mac_dinh.jpg",
+        "caption":  "Hình 3.8. Danh sách hai giao dịch với bộ lọc mặc định",
+        "sha256":  "308b220dfced64b972af3098b2d58a351f75fd96513d02b063c3877abb83104f"
+    },
+    {
+        "figure":  "3.9",
+        "file":  "hinh_3_09_13_da_luu_giao_dich_danh_sach_5_dong.jpg",
+        "caption":  "Hình 3.9. Thông báo đã lưu và danh sách năm giao dịch ở bộ B",
+        "sha256":  "597588b3daa2a142df9ac477a07ddf77cf1a4e6b328bba24a69806855192dac6"
+    },
+    {
+        "figure":  "3.10",
+        "file":  "hinh_3_10_32_loc_giao_dich_chi_tieu_an_uong.png",
+        "caption":  "Hình 3.10. Kết quả lọc năm khoản chi Ăn uống trong tháng 11",
+        "sha256":  "ebb21138907c9dd6889b72009f1551e228639fd2c76aa3857ca39efbe851fd64"
+    },
+    {
+        "figure":  "3.11",
+        "file":  "hinh_3_11_15_ngan_sach_3tr_da_chi_450k.jpg",
+        "caption":  "Hình 3.11. Ngân sách tháng 11 năm 2026 ở bộ A",
+        "sha256":  "00b0308738bd6a32a6bbd2f2bbd5676093728fa928f8ff662c3280ba6a3dfd7b"
+    },
+    {
+        "figure":  "3.12",
+        "file":  "hinh_3_12_16_da_luu_ngan_sach_1tr_da_chi_575k.jpg",
+        "caption":  "Hình 3.12. Kết quả lưu hạn mức 1 triệu đồng ở bộ C",
+        "sha256":  "48f16f67a5933a2948fe6d59de6d4085cea2d14367d0a9091bd8f9c2bd721da5"
+    },
+    {
+        "figure":  "3.13",
+        "file":  "hinh_3_13_01_ke_hoach_thang_du_kien_1300000_vuot_300000.png",
+        "caption":  "Hình 3.13. Kế hoạch tháng vượt dự trù 300.000 đồng",
+        "sha256":  "a7e6bfcda73621e43b7818e79cd39771eecc6d39305a74c7bf5eb0046f78bc37"
+    },
+    {
+        "figure":  "3.14",
+        "file":  "hinh_3_14_02_ket_qua_mua_A_650000_giao_dich_18.png",
+        "caption":  "Hình 3.14. Kết quả mua A với thực tế 650.000 đồng",
+        "sha256":  "e2b4baf88c900ff1661303d538f76b1b816ed0be67e2a5fa474fd64120273074"
+    },
+    {
+        "figure":  "3.15",
+        "file":  "hinh_3_15_03_khoan_chi_lien_ket_A_650000.png",
+        "caption":  "Hình 3.15. Khoản chi 650.000 đồng liên kết với danh sách A",
+        "sha256":  "d2576ec2eb351833ffc6b370c45e6eedd55e013b53feb8da25e5ebf77acc4b67"
+    },
+    {
+        "figure":  "3.16",
+        "file":  "hinh_3_16_10_tong_quan_sau_mua_chi_650000_ngan_sach_con_350000.png",
+        "caption":  "Hình 3.16. Tổng quan sau mua và ngân sách còn 350.000 đồng",
+        "sha256":  "4ff93701988fc78666e8ad8ce20c13e127c1001feeeb38d398dee672b3a8fa36"
+    },
+    {
+        "figure":  "3.17",
+        "file":  "hinh_3_17_11_hop_thoai_huy_mua_A_giao_dich_22.png",
+        "caption":  "Hình 3.17. Hộp thoại hủy ghi nhận mua ở lượt giao dịch #22",
+        "sha256":  "a2b6efa50e13685a9145601505b3a58a0ee7ad3cfc6fcdf139769ce2659b724a"
+    },
+    {
+        "figure":  "3.18",
+        "file":  "hinh_3_18_12_huy_mua_thanh_cong_A_chua_mua.png",
+        "caption":  "Hình 3.18. Hủy mua thành công và khôi phục kế hoạch tháng",
+        "sha256":  "618755258d123b224d59c3a0f9a512a1b70f84e3a78301e2c132f06fcf596ee4"
+    },
+    {
+        "figure":  "3.19",
+        "file":  "hinh_3_19_04_tong_quan_chi_0_vi_2000000_ngan_sach_1000000.png",
+        "caption":  "Hình 3.19. Tổng quan chưa có chi thực tế",
+        "sha256":  "418ddde0dd4ee9a4e37c3659114afcc8975811bec73eaadbf40fcd9b390c9a55"
+    },
+    {
+        "figure":  "3.20",
+        "file":  "hinh_3_20_13_bieu_do_hai_danh_muc_trung_ten_70_30.png",
+        "caption":  "Hình 3.20. Hai danh mục trùng tên có tỷ trọng 70% và 30%",
+        "sha256":  "45348d753b3983ebe0064f6cb5de3e98d86f357557fbab8eb5c6c02ac82b4d9a"
+    },
+    {
+        "figure":  "3.21",
+        "file":  "hinh_3_21_05_canh_bao_chi_am_vi_50000.png",
+        "caption":  "Hình 3.21. Ghi chi 150.000 đồng làm Ví nhỏ âm 50.000 đồng",
+        "sha256":  "aaa35561a2990632613aa202a236d7ed8552f548ba0d625066ef516f8463924d"
+    },
+    {
+        "figure":  "3.22",
+        "file":  "hinh_3_22_06_ngan_sach_con_850000_khi_vi_am.png",
+        "caption":  "Hình 3.22. Ngân sách vẫn còn 850.000 đồng khi Ví nhỏ âm",
+        "sha256":  "ee7e081197b28ee32a702ce0bf39108851c51b262e792631b306a5d443e2afc8"
+    },
+    {
+        "figure":  "3.23",
+        "file":  "hinh_3_23_07_so_du_vi_nho_am_50000.png",
+        "caption":  "Hình 3.23. Số dư Ví nhỏ âm 50.000 đồng trên trang Ví",
+        "sha256":  "f3837909a128ba4ce5cfac1308abe8ff24dc3ee191095f3f5e2e90857a5a193d"
+    },
+    {
+        "figure":  "3.24",
+        "file":  "hinh_3_24_08_canh_bao_vuot_ngan_sach_350000.png",
+        "caption":  "Hình 3.24. Cảnh báo tổng chi nhiều ví vượt ngân sách 350.000 đồng",
+        "sha256":  "316bb32f87cd6543fce21918f81625a91605e206f5ff5bc345ae6de07e86b6cd"
+    },
+    {
+        "figure":  "3.25",
+        "file":  "hinh_3_25_09_ngan_sach_chi_1350000_con_am_350000.png",
+        "caption":  "Hình 3.25. Ngân sách tháng với tổng chi 1.350.000 đồng",
+        "sha256":  "20712c36cd4bf57354dd588db3253f6234bca5fbc46091579492f90a102922eb"
+    },
+    {
+        "figure":  "3.26",
+        "file":  "hinh_3_26_14_canh_bao_dong_thoi_am_vi_va_vuot_ngan_sach_50000.png",
+        "caption":  "Hình 3.26. Hai cảnh báo đồng thời khi âm ví và vượt ngân sách",
+        "sha256":  "02ea1ec103bbd8453b592954f507c48e0ccd5a0f6b5596e044c9d6a8896626fe"
+    },
+    {
+        "figure":  "3.27",
+        "file":  "hinh_3_27_23_validation_trinh_duyet_chua_chon_vi.jpg",
+        "caption":  "Hình 3.27. Kiểm tra bắt buộc chọn ví tại trình duyệt",
+        "sha256":  "a9aea9a65cb84eb933f3980bd6b1e37a850f9f55c1cf9b054f024071585f9f47"
+    },
+    {
+        "figure":  "3.28",
+        "file":  "hinh_3_28_34_giao_dien_mo_phong_390px.jpg",
+        "caption":  "Hình 3.28. Trang Ví trên màn hình mô phỏng rộng 390 px",
+        "sha256":  "77dcc13811db12416c53515bf8ccbd73ae4ec569e7aca4265c6706bc078041e4"
+    },
+    {
+        "figure":  "3.29",
+        "file":  "hinh_3_29_35_sql_truoc_mua.png",
+        "caption":  "Hình 3.29. SQL trước mua: chưa mua, không có khoản chi liên kết",
+        "sha256":  "f597fd06db53f24898f4f95c115175e5e52a2efdd5d5978ace22f2dc791795d2"
+    },
+    {
+        "figure":  "3.30",
+        "file":  "hinh_3_30_36_sql_sau_xac_nhan_mua.png",
+        "caption":  "Hình 3.30. SQL sau xác nhận: đúng một giao dịch #11",
+        "sha256":  "7da245adb4acfa38047866d38b1bcdb7b813e020ffcfda909374629f0421cf26"
+    },
+    {
+        "figure":  "3.31",
+        "file":  "hinh_3_31_37_sql_sau_huy_xac_nhan.png",
+        "caption":  "Hình 3.31. SQL sau hủy: giao dịch liên kết rỗng, tổng hợp khôi phục",
+        "sha256":  "e14cb1e61574906a435c1eab5e3a963fd519befe82ddeb5f4c813d192333fc99"
+    }
+]

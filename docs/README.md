@@ -14,3 +14,5 @@
 `kiem_thu/` giữ một bộ log của bản mã nguồn đã kiểm chứng ngày 17/11/2026. Kết quả các lần chạy mới đi vào `output/checks`, được Git bỏ qua.
 
 Trong log công khai, đường dẫn thư mục trên máy đã được thay bằng `<PROJECT_ROOT>`; nội dung và kết quả kiểm thử được giữ nguyên.
+
+Ảnh được sử dụng trong báo cáo: [danh mục 31 ảnh minh chứng](anh_bao_cao/README.md).

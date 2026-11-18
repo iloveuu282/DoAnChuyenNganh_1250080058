@@ -1,4 +1,4 @@
-﻿# FinanceShopping
+# FinanceShopping
 
 Đồ án quản lý tài chính cá nhân và hỗ trợ mua sắm của Mai Việt Hoàng, MSSV 1250080058, lớp 12_ĐH_CNPM1. Giảng viên hướng dẫn: ThS. Từ Thanh Trí.
 
@@ -61,3 +61,8 @@ Giữ `appsettings.Local.json` riêng trên máy; không đưa chuỗi kết n�
 Chưa có lịch sử hủy xác nhận, nghiệp vụ trả hàng/hoàn tiền, chuyển tiền giữa ví, ngân sách theo danh mục, mua từng phần hoặc kết nối ngân hàng. Hủy xác nhận phục vụ sửa ghi nhận nhầm. Các giới hạn này phải được giải thích đúng khi demo.
 
 Thư mục này là mã nguồn để đưa lên GitHub. Hồ sơ Word/PDF, mẫu của Khoa, nhận xét giảng viên, ảnh gốc và tài liệu chuẩn bị bảo vệ được quản lý riêng bên ngoài kho mã nguồn. Cấu hình máy `appsettings.Local.json`, file build và kết quả chạy mới trong `output` được Git bỏ qua theo `.gitignore`.
+
+## Tài nguyên minh chứng của báo cáo
+
+- [31 ảnh chụp phần mềm và SQL Server](docs/anh_bao_cao/README.md), đánh số khớp các Hình 3.1–3.31 trong Word.
+- [10 sơ đồ UML, kiến trúc và dữ liệu](diagrams/README.md), kèm nguồn chỉnh sửa draw.io và ảnh PNG.
