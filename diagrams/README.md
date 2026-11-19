@@ -27,5 +27,3 @@ Sau khi sửa, lưu `.drawio` rồi xuất PNG cùng tên để hai bản đồn
 - OwnedEntity là lớp cơ sở C#, không phải bảng riêng. Tam giác rỗng hướng về lớp cha; hình thoi đặc biểu thị hợp thành.
 - Sơ đồ trình tự phân biệt nhánh đã/chưa mua, các bước lưu, commit và rollback.
 - Sơ đồ kế hoạch phản ánh code hiện hành: làm tròn từng dòng rồi cộng tổng, đồng thời cộng các danh sách chưa mua cùng tài khoản/tháng; chưa ghi chi thực tế.
-
-Các nguồn `.dot`, `.mmd`, `.puml` trước chuyển đổi được lưu riêng trong tài liệu cá nhân để đối chiếu. Bản hiện hành của sơ đồ trong kho mã nguồn là `.drawio`.

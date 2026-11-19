@@ -1,8 +1,8 @@
 # Kiểm tra sản phẩm FinanceShopping
 
-Tài liệu dành cho lần kiểm tra giao diện sau khi hoàn thiện mã nguồn ngày 17/11/2026. Chạy `02_CHAY_UNG_DUNG.cmd`, chờ thông báo lắng nghe rồi mở http://localhost:5188. Nếu ứng dụng đang chạy từ phiên cũ, dừng bằng Ctrl+C trước khi chạy lại để nạp bản code mới.
+Các bước kiểm tra chức năng và số liệu trên giao diện. Chạy `02_CHAY_UNG_DUNG.cmd`, chờ thông báo lắng nghe rồi mở http://localhost:5188. Nếu ứng dụng đang chạy từ phiên cũ, dừng bằng Ctrl+C trước khi chạy lại để nạp bản code mới.
 
-Không cần chạy lại cài đặt hoặc tạo lại cơ sở dữ liệu khi cập nhật bản này. Nếu máy chưa từng cấu hình, thực hiện `01_CAI_DAT.cmd` theo `HUONG_DAN_CHAY.md`.
+Máy mới cần chạy `01_CAI_DAT.cmd` theo [hướng dẫn cài đặt](HUONG_DAN_CHAY.md).
 
 ## Chuẩn bị dữ liệu riêng
 
@@ -49,4 +49,4 @@ Hai ca HTTP SQL Server dùng hai phiên cookie đăng nhập độc lập và Te
 
 Dừng phiên `02_CHAY_UNG_DUNG.cmd`, chạy `04_CHAY_TREN_DIEN_THOAI.cmd`. Máy tính và điện thoại cùng Wi-Fi; truy cập `http://IP_CUA_MAY_TINH:5188`. Chế độ này cho phép truy cập qua hostname/IP trong LAN. Cấu hình chạy localhost thông thường vẫn giới hạn localhost. Nếu điện thoại không kết nối được, xem `DIEN_THOAI_VA_GIAO_DIEN.md` để kiểm tra mạng và tường lửa.
 
-Khi phát hiện lỗi, ghi màn hình/chức năng, thao tác trước lỗi, số liệu nhập, kết quả mong muốn và kết quả thực tế. Đừng xóa dữ liệu trước khi đối chiếu.
+Khi phát hiện lỗi, ghi lại chức năng, thao tác, dữ liệu nhập và kết quả thực tế để đối chiếu với bảng trên.

@@ -1,4 +1,4 @@
-# Chạy trên điện thoại và chỉnh giao diện
+# Chạy trên điện thoại
 
 ## Điện thoại thật qua Wi-Fi
 
@@ -18,25 +18,8 @@ Nếu Windows hỏi quyền mạng cho ứng dụng, cho phép trên mạng Priv
 
 Đây là bản demo trong mạng nội bộ qua HTTP. Không cấu hình chuyển tiếp cổng router. Khi cần sử dụng từ Internet, phải có bước triển khai riêng với HTTPS và cấu hình vận hành phù hợp.
 
-## Nơi chỉnh giao diện trong VS Code
+## Kiểm tra hiển thị
 
-| Muốn đổi | Mở file |
-|---|---|
-| Font, cỡ chữ chung, màu chính, nền, độ rộng trang | `src/FinanceShopping.Web/wwwroot/css/theme.css` |
-| Bố cục, bảng, biểu mẫu, giao diện điện thoại | `src/FinanceShopping.Web/wwwroot/css/site.css` |
-| Tên ứng dụng, menu, footer | `src/FinanceShopping.Web/Views/Shared/_Layout.cshtml` |
-| Nội dung Tổng quan | `src/FinanceShopping.Web/Views/Home/Index.cshtml` |
-| Thu chi | `src/FinanceShopping.Web/Views/Transactions/` |
-| Danh sách, mặt hàng và xác nhận/hủy mua | `src/FinanceShopping.Web/Views/Shopping/` |
+Có thể dùng Device Toolbar trong Chrome hoặc Edge DevTools để kiểm tra chiều rộng 360 px và 390 px. Thử menu, biểu mẫu, bảng dữ liệu và thông báo lỗi. Bảng rộng được cuộn trong khung.
 
-Ví dụ: đổi `--font-base: 16px` thành `18px` để phóng chữ. Các cỡ `rem` tăng theo cỡ gốc. Đổi `--color-primary` và `--color-primary-hover` để đổi màu nút/liên kết. Các màu trạng thái cảnh báo giữ ý nghĩa riêng.
-
-Sửa CSS rồi Ctrl+F5 trên trình duyệt máy tính. Với điện thoại, tải lại trang; nếu còn cache thì đóng/mở lại tab hoặc xóa dữ liệu trang. Sau khi sửa `.cshtml` hoặc C#, dừng và chạy lại script để build.
-
-## Ba kích thước cần kiểm tra
-
-- Máy tính: 1366×768 hoặc màn hình của bạn.
-- Điện thoại: 390×844 và 360×800 trong Edge/Chrome DevTools.
-- Trên điện thoại thật: kiểm tra đăng nhập, nhập tiền, chọn ngày và xác nhận/hủy mua.
-
-Bảng dữ liệu có thể cuộn ngang bên trong khung; toàn trang không nên tràn ngang. Kiểm tra thêm bằng tên danh mục dài và số tiền lớn. Phần này là hướng dẫn kiểm tra; chưa phải kết quả nghiệm thu trên điện thoại của bạn.
+Kiểm tra bằng DevTools không thay thế thử trên điện thoại thật. Bộ kết quả hiện có chưa bao gồm kiểm thử trên thiết bị vật lý.

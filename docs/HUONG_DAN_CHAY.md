@@ -11,9 +11,9 @@ dotnet --version
 dotnet --list-sdks
 ```
 
-Cần có SDK 10.x. Visual Studio cần workload ASP.NET and web development. Nếu VS không nhận net10.0, cập nhật VS hoặc dùng `dotnet` trong Terminal. Không thay TargetFramework xuống .NET Framework 4.x.
+Cần có SDK 10.x. Visual Studio cần workload ASP.NET and web development. Nếu VS không nhận net10.0, cập nhật VS hoặc dùng `dotnet` trong Terminal.
 
-Giải nén vào đường dẫn ngắn, ví dụ `C:\DoAn\FinanceShopping`. Toàn bộ tài liệu dùng thư mục này làm gốc. Không mở riêng một file C# rồi bấm Run Code.
+Giải nén vào đường dẫn ngắn, ví dụ `C:\DoAn\FinanceShopping`. Chạy lệnh tại thư mục gốc của kho mã nguồn, trừ khi có hướng dẫn khác.
 
 ## 2. Chọn đúng SQL Server
 
@@ -27,9 +27,9 @@ Nếu chưa kết nối được, mở Services, kiểm tra `SQL Server (MSSQLSE
 
 ## 3. Cài đặt bằng tệp hỗ trợ
 
-Chạy `01_CAI_DAT.cmd`. Nhập Server name đã kiểm tra. Script ghi chuỗi kết nối vào `src/FinanceShopping.Web/appsettings.Local.json`, build Release, tạo bảng bằng `EnsureCreated` và seed tài khoản mẫu bằng Identity.
+Chạy `01_CAI_DAT.cmd`. Nhập Server name đã kiểm tra. Nếu nhấn Enter, script chọn LocalDB; chỉ dùng lựa chọn này khi máy đã cài LocalDB. Với SQL Server Express, nhập đúng tên instance, ví dụ `.\SQLEXPRESS`. Script ghi chuỗi kết nối vào `src/FinanceShopping.Web/appsettings.Local.json`, build Release, tạo bảng bằng `EnsureCreated` và seed tài khoản mẫu bằng Identity.
 
-Script chỉ thêm dữ liệu mẫu khi tài khoản đó chưa có ví. Chạy lại không nhân đôi ví/giao dịch trong trường hợp dữ liệu mẫu còn nguyên. Nếu demo bị sửa nhiều, dùng database mới tên `FinanceShopping_Demo2` bằng cách đổi chuỗi kết nối và chạy seed; không xóa dữ liệu quan trọng để đặt lại demo. Không có chức năng reset ngầm.
+Dữ liệu mẫu chỉ được thêm khi tài khoản chưa có ví. Chạy lại cài đặt không khôi phục những dữ liệu mẫu đã sửa hoặc xóa. Để có bộ dữ liệu mẫu ban đầu, cấu hình một database rỗng khác rồi chạy `--seed-demo`.
 
 Cấu hình mặc định sử dụng Windows Authentication. Tài khoản Windows hiện tại cần quyền tạo database trong lần đầu, hoặc nhờ người có quyền tạo trước database **rỗng** `FinanceShopping` và cấp quyền tạo bảng/đọc/ghi. Không dùng database đang chứa các bảng của đồ án khác. `EnsureCreated` không cập nhật lược đồ đã tồn tại và không phải cơ chế migrations.
 
@@ -76,18 +76,18 @@ $env:ASPNETCORE_ENVIRONMENT='Production'
 dotnet run -c Release --no-build --no-launch-profile
 ```
 
-Lệnh seed chạy rồi thoát, lệnh sau mới mở server. Muốn chỉ khởi tạo bảng mà không thêm demo, dùng `--init-db` thay `--seed-demo`.
+Trước khi chạy, cấu hình `appsettings.Local.json` theo mục 3. Lệnh seed chạy rồi thoát, lệnh sau mới mở server. Muốn chỉ khởi tạo bảng mà không thêm demo, dùng `--init-db` thay `--seed-demo`.
 
 ## 7. SQL thủ công nếu cần
 
-Cách tự động ở mục 3 là lựa chọn chính. Nếu giảng viên muốn thấy SQL:
+Có thể khởi tạo bằng SQL thay cho cách tự động ở mục 3:
 
 1. Tạo database rỗng FinanceShopping trong SSMS, chọn database này.
 2. Mở `database/schema.sql`, chạy toàn bộ. Đây là DDL đầy đủ, gồm Identity, index duy nhất, check constraint và khóa ngoại.
 3. Cấu hình đúng chuỗi kết nối rồi chạy `--seed-demo` để tạo tài khoản với mật khẩu băm chuẩn và dữ liệu mẫu.
 4. Mở `database/verify.sql` để đối chiếu sau khi chạy chức năng.
 
-Không chạy DDL vào database đã được khởi tạo tự động. Không cần vừa chạy schema.sql vừa tạo bảng qua EnsureCreated trên hai database khác nhau. Lược đồ bàn giao theo cách tạo mới, chưa có lịch sử migrations; nếu đổi mô hình sau này cần lập migration có kiểm soát thay vì mong EnsureCreated sửa bảng.
+Không chạy DDL vào database đã được khởi tạo tự động. Chọn một cách tạo bảng: script SQL hoặc khởi tạo tự động. Dự án chưa có lịch sử migrations; `EnsureCreated` chỉ tạo lược đồ mới, không nâng cấp bảng đã tồn tại.
 
 ## 8. Kiểm thử tự động
 
@@ -99,7 +99,7 @@ dotnet run --project tests/FinanceShopping.Checks -c Release
 
 Kết quả của bản hiện tại: `34 PASS, 0 FAIL`. Mặc định dùng SQLite tạm trong bộ nhớ; không sửa database demo. Khi chạy bằng CMD, log mới được lưu riêng theo thời gian trong `output/checks`.
 
-Để chạy 33 ca nghiệp vụ, ba ca đồng thời hai kết nối và hai ca HTTP trên **SQL Server thật**, chạy `06_KIEM_THU_SQL_SERVER.cmd` với instance `.\SQLEXPRESS`, hoặc dùng lệnh dưới đây cho instance khác. Chỉ dùng cấu hình database thử tên kết thúc bằng `_Test`. Chương trình thêm mã ngẫu nhiên để tạo database mới cho mỗi lần chạy, không xóa database có sẵn. Fixture dọn riêng dữ liệu A/B trong database mới sau từng ca. Cần quyền tạo database. Không trỏ vào database sản phẩm hoặc dữ liệu cần giữ:
+Để chạy 33 ca nghiệp vụ, ba ca đồng thời hai kết nối và hai ca HTTP trên **SQL Server thật**, chạy `06_KIEM_THU_SQL_SERVER.cmd` với instance `.\SQLEXPRESS`, hoặc dùng lệnh dưới đây cho instance khác. Chỉ dùng cấu hình database thử tên kết thúc bằng `_Test`. Chương trình thêm mã ngẫu nhiên để tạo database mới cho mỗi lần chạy, không xóa database có sẵn. Cần quyền tạo database. Không trỏ vào database sản phẩm hoặc dữ liệu cần giữ:
 
 ```powershell
 $env:FINANCE_TEST_SQLSERVER='Server=TENMAY;Database=FinanceShopping_Test;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=False'
@@ -111,19 +111,9 @@ Ca TC29 HTTP vẫn dùng SQLite để tách host. Tổng chế độ SQL Server 
 
 ## 9. Kiểm tra giao diện nhỏ
 
-Mở DevTools bằng F12 → bật Device Toolbar → chọn chiều rộng khoảng 390 px. Thử menu, form thu chi, danh sách mặt hàng, thông báo lỗi. Bảng rộng được cuộn ngang, không cắt cột. Đây là kiểm tra bố cục responsive; không đồng nghĩa đã thử trên điện thoại vật lý. Muốn dùng điện thoại thật qua Wi-Fi cần cấu hình bind địa chỉ LAN, AllowedHosts và firewall; không cần cho phạm vi localhost của đồ án, không mở cổng nếu chỉ quay bằng giả lập màn hình nhỏ.
+Dùng Device Toolbar trong Chrome hoặc Edge để thử chiều rộng 360 px và 390 px. Để truy cập từ điện thoại thật cùng Wi-Fi, xem [hướng dẫn LAN](DIEN_THOAI_VA_GIAO_DIEN.md).
 
-## 10. Publish tùy chọn
-
-Sau khi đã chạy và nghiệm thu bằng mã nguồn:
-
-```powershell
-dotnet publish src/FinanceShopping.Web -c Release -r win-x64 --self-contained true -o publish
-```
-
-Thư mục publish chứa file thực thi web và runtime; vẫn cần SQL Server, cấu hình kết nối đúng và database đã khởi tạo. Sao chép `appsettings.Local.json` vào publish nếu chưa có. Mở Terminal tại publish rồi chạy `FinanceShopping.Web.exe --urls http://localhost:5188`. Không bật PublishSingleFile vì không cần gom tài nguyên web. Tùy chọn này cần tải runtime win-x64, chưa được dựng hoặc thử trên Windows trong bộ bàn giao. Bản mã nguồn + CMD là cách chạy chính.
-
-## 11. Sự cố thường gặp
+## 10. Sự cố thường gặp
 
 | Hiện tượng | Cách kiểm tra và xử lý |
 |---|---|
@@ -131,7 +121,7 @@ Thư mục publish chứa file thực thi web và runtime; vẫn cần SQL Serve
 | Login failed / Cannot open database | Kiểm tra Windows/SQL Authentication, quyền tạo database và tên database. |
 | Invalid object name | Đang trỏ sai DB hoặc chưa chạy seed/init. Không tự tạo riêng từng bảng bằng tay. |
 | LocalDB không tồn tại | Nhập đúng SQL Server instance bạn đã cài; không mặc định ép dùng LocalDB. |
-| Cổng 5188 đang được sử dụng | Đóng phiên CMD/VS cũ. Hoặc đổi ASPNETCORE_URLS sang localhost:5189 rồi truy cập đúng cổng. |
+| Cổng 5188 đang được sử dụng | Dừng phiên ứng dụng cũ bằng Ctrl+C rồi chạy lại. Script mặc định dùng cổng 5188. |
 | NuGet không tải được | Kiểm tra Internet/proxy, chạy dotnet restore tại thư mục dự án. Không dùng --no-restore cho lần đầu. |
 | Tổng quan trống | Chọn tháng 11/2026 và khoảng ngày tháng 11; kiểm tra đang dùng tài khoản demo. |
 | Không đăng nhập được | Kiểm tra seed đã thành công, mật khẩu Demo@2026!, chờ 5 phút nếu bị khóa vì sai 5 lần. |
@@ -139,7 +129,3 @@ Thư mục publish chứa file thực thi web và runtime; vẫn cần SQL Serve
 | Không xóa ví/danh mục | Kiểm tra giao dịch đang tham chiếu; ràng buộc bảo vệ lịch sử dữ liệu. |
 | Danh sách đã thay đổi | Tải lại trang. Version chống thao tác từ tab cũ; kiểm tra trạng thái trước khi thử lại. |
 | Trình duyệt báo chưa kết nối lúc mới chạy | Chờ server khởi động xong rồi tải lại. Giữ cửa sổ server mở. |
-
-## 12. Trước khi gửi bài
-
-Thực hiện [các bước kiểm tra sản phẩm](KIEM_TRA_SAN_PHAM.md), đối chiếu kết quả với [minh chứng kiểm thử](KIEM_THU.md). Git bỏ qua bin, obj, output và cấu hình máy theo `.gitignore`; kiểm tra `git status` trước khi đưa mã nguồn lên kho. Giữ dữ liệu giả lập và hướng dẫn seed. Tài khoản demo chỉ dùng cho trình diễn cục bộ. Hồ sơ báo cáo và video được quản lý riêng bên ngoài thư mục mã nguồn.
